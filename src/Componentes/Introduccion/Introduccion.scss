@@ -1,0 +1,11 @@
+.introduccion{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+
+    .derecha {
+        flex: 0.5;
+    }
+    .izquierda{
+        flex: 0.5;
+    }
+}
