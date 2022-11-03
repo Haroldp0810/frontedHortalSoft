@@ -15,6 +15,8 @@ Comandos y extensiones para instalar dentro de visual :
 
     * SASS: npm add node-sass
 
+    * Boostrap: npm install bootstrap@5.2.2
+
 Dependencias para usar 
 
     react-router-dom: una guia de enrutador https://v5.reactrouter.com/web/guides/quick-start
