@@ -3,9 +3,11 @@
     display: flex;
 
     .derecha {
+        background-color: aqua;
         flex: 0.5;
     }
     .izquierda{
+        background-color: aquamarine;
         flex: 0.5;
     }
 }
