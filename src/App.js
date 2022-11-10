@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/Login" exact render={props =>(<Login {...props }/>)}></Route>
-        <Route path="/Home" exact render={props =>(<Home {...props }/>)}></Route>
+        <Route path="/home" exact render={props =>(<Home {...props }/>)}></Route>
       </Switch>
     </Router>
   );

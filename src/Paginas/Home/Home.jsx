@@ -16,7 +16,6 @@ export default function Home() {
   return (
     <div className="app">
       <BarraSuperior/>
-      <Carrusel></Carrusel>
       <div className="secciones">
         <Introduccion>
         </Introduccion>
