@@ -1,24 +1,18 @@
 import "./App.scss";
-import { useState } from "react";
 import React from "react";
 import Home from "./Paginas/Home/Home";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Login from "./Componentes/Login/Informacion";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "./Componentes/Login/Login"
 
 
 
 function App() {
-  const [menuAbierto, setMenuAbierto] = useState(true);
 
   return (
     <Router>
       <Switch>
-        <Route path="/Home">
-          <Home />
-        </Route>
-        <Route path="/Login">
-          <Login />
-        </Route>
+        <Route path="/Login" exact render={props =>(<Login {...props }/>)}></Route>
+        <Route path="/Home" exact render={props =>(<Home {...props }/>)}></Route>
       </Switch>
     </Router>
   );
