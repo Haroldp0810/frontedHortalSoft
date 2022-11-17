@@ -1,12 +1,8 @@
-import BarraSuperior from "../../Componentes/BarraSuperior/BarraSuperior";
-import Contacto from "../../Componentes/Contacto/Contacto";
 
-import Introduccion from "../../Componentes/Introduccion/Introduccion";
 import "./Home.scss";
-import { useState } from "react";
-import React from "react";
-import Carrusel from "../../Componentes/Carrusel/Carrusel";
-import Informacion from "../../Componentes/Informacion/Informacion";
+
+import Navbar from "../../Componentes/Navbar/Navbar";
+import UncontrolledExample from "../../Componentes/Carrusel/Carrusel";
 
 
 export default function Home() {
@@ -15,12 +11,10 @@ export default function Home() {
 
   return (
     <div className="app">
-      <BarraSuperior/>
+      <Navbar/>
       <div className="secciones">
-        <Introduccion>
-        </Introduccion>
-        <Informacion/>
-        <Contacto/>
+        <UncontrolledExample/>
+        <UncontrolledExample/>
       </div>
     </div>
   );

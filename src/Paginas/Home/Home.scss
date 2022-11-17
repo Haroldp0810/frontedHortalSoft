@@ -4,7 +4,7 @@
     .secciones{
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: lightsalmon;
+        background-color: rgb(255, 255, 255);
         position: relative;
         top: 70px;
         scroll-behavior: smooth;
@@ -16,7 +16,7 @@
 
         > *{
             width: 100vw;
-            height: calc(100vh - 70px);
+            height: calc(69vh - 70px);
             scroll-snap-align: start;
         }
     }

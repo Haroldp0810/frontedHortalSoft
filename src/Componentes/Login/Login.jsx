@@ -9,10 +9,13 @@ import {
   MDBInput,
   MDBCheckbox,
 } from "mdb-react-ui-kit";
+import { withRouter } from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
 
 import { Apiurl } from "../../Services/routes";
 
 import axios from "axios";
+import imagen from "../../assets/SVG/LogoCompleto.png"
 
 //import React, { Component } from 'react';
 //import { render } from "@testing-library/react";
@@ -23,8 +26,6 @@ class Login extends React.Component {
   constructor(props){
     super(props);
   }
-
-  
 
   state = {
     form: {
@@ -44,6 +45,8 @@ class Login extends React.Component {
     });
     console.log(this.state.form);
   };
+
+  
 
   manejadorBoton = () => {
     let url = Apiurl + "/authenticate";
@@ -70,27 +73,27 @@ class Login extends React.Component {
       <React.Fragment>
         <MDBContainer fluid className="p-3 my-5 h-custom">
           <MDBRow>
-            <MDBCol col="10" md="6">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            <MDBCol col="10" md="6" >
+              <center><img 
+                src={imagen} width="300"
                 className="img-fluid"
                 alt="Sample image"
-              />
+              /></center>
             </MDBCol>
 
             <MDBCol col="4" md="6">
               <div className="d-flex flex-row align-items-center justify-content-center">
                 <p className="lead fw-normal mb-0 me-3">Inicia con</p>
 
-                <MDBBtn floating size="md" tag="a" className="me-2">
+                <MDBBtn floating size="md" tag="a" className="me-2" color="black">
                   <MDBIcon fab icon="facebook-f" />
                 </MDBBtn>
 
-                <MDBBtn floating size="md" tag="a" className="me-2">
+                <MDBBtn floating size="md" tag="a" className="me-2" color="black" >
                   <MDBIcon fab icon="twitter" />
                 </MDBBtn>
 
-                <MDBBtn floating size="md" tag="a" className="me-2">
+                <MDBBtn floating size="md" tag="a" className="me-2" color="black">
                   <MDBIcon fab icon="linkedin-in" />
                 </MDBBtn>
               </div>
@@ -99,7 +102,9 @@ class Login extends React.Component {
                 <p className="text-center fw-bold mx-3 mb-0">Ó</p>
               </div>
 
+              <div className="fomrs">
               <MDBInput
+                btnColor="black"
                 wrapperClass="mb-4"
                 label="Usuario"
                 id="formControlLg"
@@ -117,7 +122,10 @@ class Login extends React.Component {
                 size="lg"
                 onChange={this.manejadorCambios}
               />
+              </div>
+              
 
+              <div className="checkbox">
               <div className="d-flex justify-content-between mb-4">
                 <MDBCheckbox
                   name="flexCheck"
@@ -125,7 +133,8 @@ class Login extends React.Component {
                   id="flexCheckDefault"
                   label="Recordar Usuario"
                 />
-                <a href="!#">¿Olvidaste tu contraseña?</a>
+                <a href="!#" >¿Olvidaste tu contraseña?</a>
+              </div>
               </div>
 
             {this.state.error === true && 
@@ -133,14 +142,16 @@ class Login extends React.Component {
                   {this.state.errorMsg}
               </div>
             }
-
+              <div>
               <div className="text-center text-md-start mt-4 pt-2">
+                
                 <MDBBtn
                   className="mb-0 px-5"
                   size="lg"
                   onClick={this.manejadorBoton}
+                  color="black"
                 >
-                  Ingresar
+                  <a href="/home">Ingresar </a>
                 </MDBBtn>
                 <p className="small fw-bold mt-2 pt-1 mb-2">
                   ¿No tienes cuenta aun?{" "}
@@ -149,56 +160,14 @@ class Login extends React.Component {
                   </a>
                 </p>
               </div>
+              </div>
             </MDBCol>
           </MDBRow>
 
-          <div className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-            <div className="text-white mb-3 mb-md-0">
-              Copyright © 2022. All rights reserved.
-            </div>
-
-            <div>
-              <MDBBtn
-                tag="a"
-                color="none"
-                className="mx-3"
-                style={{ color: "white" }}
-              >
-                <MDBIcon fab icon="facebook-f" size="md" />
-              </MDBBtn>
-
-              <MDBBtn
-                tag="a"
-                color="none"
-                className="mx-3"
-                style={{ color: "white" }}
-              >
-                <MDBIcon fab icon="twitter" size="md" />
-              </MDBBtn>
-
-              <MDBBtn
-                tag="a"
-                color="none"
-                className="mx-3"
-                style={{ color: "white" }}
-              >
-                <MDBIcon fab icon="google" size="md" />
-              </MDBBtn>
-
-              <MDBBtn
-                tag="a"
-                color="none"
-                className="mx-3"
-                style={{ color: "white" }}
-              >
-                <MDBIcon fab icon="linkedin-in" size="md" />
-              </MDBBtn>
-            </div>
-          </div>
         </MDBContainer>
       </React.Fragment>
     );
   }
 }
 
-export default Login;
+export default  withRouter (Login);

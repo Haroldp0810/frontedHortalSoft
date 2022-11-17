@@ -1,9 +1,32 @@
+
+//background-color: rgb(231, 231, 231);
+
 .divider:after,
 .divider:before {
   content: "";
   flex: 1;
   height: 1px;
   background: #eee;
+}
+
+.checkbox{
+  margin: 10px 67px;
+}
+.info{
+  width: 67%;
+  position: relative;
+  text-align: center;
+  left: 17%;
+  height: auto;
+}
+.login{
+  width: 100px;
+  height: 100px;
+}
+
+.fomrs{
+  width: 80%;
+  margin-left: 66px;
 }
 .h-custom {
   height: calc(100% - 73px);
