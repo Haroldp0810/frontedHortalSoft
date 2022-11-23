@@ -1,0 +1,47 @@
+.fondo{
+    background-color: #131212;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.invierno Card{
+    margin-bottom: 10px;
+}
+
+.invierno {
+  background-color: #131212;
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.otono {
+    background-color: #131212;
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.primavera {
+    background-color: #131212;
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.verano {
+    background-color: #131212;
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.h1 {
+  text-align: center;
+}
+.card {
+  width: 18rem;
+  margin: 42px;
+  box-shadow: inset 0 -3em 3em rgb(255, 255, 255), 0 0 0 2px rgb(255, 255, 255),
+    1.3em 1.3em 1em #000;
+}

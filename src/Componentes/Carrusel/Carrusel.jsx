@@ -4,8 +4,8 @@ import imagen from "../../assets/SVG/example.png"
 function UncontrolledExample() {
   return (
     <div className='carrusel'>
-    <Carousel>
-      <Carousel.Item>
+    <Carousel style={{opacity: "90%"}}>
+      <Carousel.Item >
         <img
           className="d-block w-100"
           src={imagen}
@@ -14,18 +14,6 @@ function UncontrolledExample() {
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={imagen}
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

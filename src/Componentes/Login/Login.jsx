@@ -43,7 +43,7 @@ class Login extends React.Component {
         [e.target.name]: e.target.value,
       },
     });
-    console.log(this.state.form);
+    //console.log(this.state.form);
   };
 
   
@@ -55,7 +55,8 @@ class Login extends React.Component {
       if(response){
         localStorage.setItem("token", response.data.token);
         const {history} =this.props
-        history.push("/home")
+        history.push("/carrito")
+        
       }else{
         this.setState({
           error:true,
@@ -65,7 +66,7 @@ class Login extends React.Component {
         console.log(response)
     });
     
-    console.log(url);
+    console.log("estoy aqui", url);
   };
 
   render() {
@@ -143,7 +144,9 @@ class Login extends React.Component {
               </div>
             }
               <div>
-              <div className="text-center text-md-start mt-4 pt-2">
+
+                <div className="ingresar">
+              <div className="text-center text-md-start mt-4 pt-2 text-align: center !important;">
                 
                 <MDBBtn
                   className="mb-0 px-5"
@@ -151,14 +154,16 @@ class Login extends React.Component {
                   onClick={this.manejadorBoton}
                   color="black"
                 >
-                  <a href="/home">Ingresar </a>
+                  Ingresar
+                  {/* <!-- <a href="/home">Ingresar </a> --> */}
                 </MDBBtn>
                 <p className="small fw-bold mt-2 pt-1 mb-2">
                   ¿No tienes cuenta aun?{" "}
-                  <a href="#!" className="link-danger">
+                  <a href="/Register" className="link-danger">
                     Registrate
                   </a>
                 </p>
+              </div>
               </div>
               </div>
             </MDBCol>

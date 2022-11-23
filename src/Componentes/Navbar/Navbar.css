@@ -6,6 +6,10 @@
 	font-family: "Titillium Web", sans-serif;
 }
 
+.img{
+	margin: 25px !important;
+}
+
 :root {
 	--mainColor: #131212;
 	--mainColorLight: #5767aa;
@@ -14,14 +18,21 @@
 }
 
 center{
-	align-items: center;
+	align-items: left;
 }
 
+login{
+	background-color: #131212;
+}
+
+style{
+	background-color: #131212 !important;
+}
 header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
+	height: 100px;
 	padding: 0 2rem;
 	background-color: var(--mainColor);
 	color: var(--textColor);
@@ -53,6 +64,7 @@ header div,
 nav {
 	display: flex;
 	align-items: center;
+	font-size: 25px;
 }
 
 /*
