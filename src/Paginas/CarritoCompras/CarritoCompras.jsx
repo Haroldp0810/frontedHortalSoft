@@ -35,8 +35,6 @@ class carrio extends React.Component {
         <Navbar />
         <div className="secciones">
           <Cards></Cards>
-          <button onClick={this.manejador}>hola aqui</button>
-          <UncontrolledExample></UncontrolledExample>
         </div>
       </div>
     );

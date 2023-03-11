@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom';
 import { Apiurl } from "../../Services/routes";
 
 import axios from "axios";
-import imagen from "../../assets/SVG/LogoCompleto.png"
+import imagen from "../../assets/SVG/Hortalsoft.jpeg"
 
 //import React, { Component } from 'react';
 //import { render } from "@testing-library/react";

@@ -1,8 +1,7 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
-import logo from "../../assets/SVG/LogoCompleto.png";
-import imagen from "../../assets/SVG/LogoSimplificado.png";
+import imagen from "../../assets/SVG/Hortalsoft.jpeg";
 import login from "../../assets/SVG/icons8-entrar-50.png";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useHistory } from "react-router-dom";
@@ -31,10 +30,11 @@ function Navbar() {
       </h3>
       <div className="center">
         <nav ref={navRef}>
-          <a href="/#">Inicio</a>
-          <a href="/#">Trabajo</a>
-          <a href="/#">Servicios</a>
-          <a href="/#">Contacto</a>
+          <a href="/home">Inicio</a>
+          <a href="/login">Agricultores</a>
+          <a href="/login">Asociaciones</a>
+          <a href="/carrito">Productos</a>
+          <a href="/login">Quienes somos</a>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
           </button>
